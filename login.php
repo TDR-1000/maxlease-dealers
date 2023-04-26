@@ -90,10 +90,6 @@ app('register')->botProtection();
                                     <div class="row social nm-mb-1">
                                     </div>
 
-                                    <p class="text-center mb-0">
-                                        Nog geen account?
-                                        <a class="nm-ft-b" href="signup.html">Maak een account aan.</a>
-                                    </p>
                                 </form>
                             </div>
 
