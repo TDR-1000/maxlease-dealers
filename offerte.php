@@ -7,9 +7,11 @@ include 'includes/header.php';
 $beheer = true;
 
 $db = app('db');
+$currentUser = app('current_user');
 
 $result = $db->select(
-  "SELECT * FROM `as_offerte` WHERE `status` < 2"
+  "SELECT * FROM `as_offerte` WHERE `partner_id` = :id",
+  array ("id" => $currentUser->dealer_id)
 );
 ?>
 
@@ -22,7 +24,7 @@ $result = $db->select(
       <div class="nk-block-head">
         <div class="nk-block">
           <div class="nk-block-head-content">
-            <h2 class="nk-block-title fw-normal">Overzicht offertes <a href="offerte-afgerond" class="btn btn-md btn-primary"><span>Afgeronde leads bekijken</span></a></h2>
+            <h2 class="nk-block-title fw-normal">Overzicht offertes</h2>
 
             <div class="card card-bordered card-preview">
             <div class="preloader" id="preloader">
@@ -37,21 +39,18 @@ $result = $db->select(
                       <th>Offerte</th>
                       <th>Achternaam</th>
                       <th>Bedrijfsnaam</th>
-                      <th>Status</th>
                       <th>Datum</th>
-                      <th>Actie</th>
+
                     </tr>
                   </thead>
                   <tbody>
                     <?php foreach ($result as $auto) { ?>
-                      <tr class='clickable-row' data-href='offerte/<?= $auto['offerte_id'] ?>'>
+                      <tr class=''>
                         <td><?= $auto['merk'] ?> <?= $auto['model'] ?></td>
                         <td><?= $auto['offerte_id'] ?></td>
                         <td><?= $auto['achternaam'] ?></td>
                         <td><?= $auto['bedrijfsnaam'] ?></td>
-                        <td><span class="badge rounded-pill bg-<?= statusOfferteColor($auto['status']); ?>"><?= statusOfferte($auto['status']) ?></span></td>
                         <td><?= date("d-m-Y", strtotime($auto['timestamp'])) ?></td>
-                        <td><a href="offerte/<?= $auto['offerte_id'] ?>" class="btn btn-sm btn-primary"><span>Bekijken</span></a></td>
                       </tr>
                     <?php } ?>
                   </tbody>

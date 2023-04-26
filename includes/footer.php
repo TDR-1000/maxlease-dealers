@@ -28,7 +28,6 @@
 
 
 
- 
   <script src="magnific-popup/jquery.magnific-popup.js"></script>
   <script>
 

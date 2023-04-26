@@ -4,7 +4,7 @@
                         <a href="index" class="logo-link nk-sidebar-logo">
                             <img class="logo-light logo-img" src="images/logo.png" srcset="images/logo.png 2x" alt="logo">
                             <img class="logo-dark logo-img" src="images/logo.png" srcset="images/logo.png 2x" alt="logo-dark">
-                            <span class="nio-version">Intranet</span>
+                            <span class="nio-version">Extranet</span>
                         </a>
                     </div>
                     <div class="nk-menu-trigger me-n2">
@@ -41,12 +41,18 @@
                                         </a>
                                     </li>
                                     <li class="nk-menu-item">
+                                        <a href="websitetools" class="nk-menu-link">
+                                            <span class="nk-menu-icon"><i class="fa-solid fa-file-code"></i></span>
+                                            <span class="nk-menu-text">Websitetools</span>
+                                        </a>
+                                    </li>
+                                    <li class="nk-menu-item d-none">
                                         <a href="besdrijfsgegevens" class="nk-menu-link">
                                             <span class="nk-menu-icon"><i class="fa-solid fa-building"></i></span>
                                             <span class="nk-menu-text">Bedrijfsgegevens</span>
                                         </a>
                                     </li>
-                                    <li class="nk-menu-item">
+                                    <li class="nk-menu-item d-none">
                                         <a href="openingstijden" class="nk-menu-link">
                                             <span class="nk-menu-icon"><i class="fa-solid fa-square-clock"></i></span>
                                             <span class="nk-menu-text">Openingstijden</span>

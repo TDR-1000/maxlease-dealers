@@ -27,7 +27,7 @@ if (app('login')->isLoggedIn()) {
 $db = app('db');
 $dealer = $db->select(
   "SELECT * FROM `as_dealers` WHERE `dealer_id` = :id",
-  array ("id" => $currentUser->dealer_id)
+  array("id" => $currentUser->dealer_id)
 );
 ?>
 
@@ -62,6 +62,8 @@ $dealer = $db->select(
   <link rel="stylesheet" href="css/kentekenplaat.min.css" />
 
   <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 
 </head>
 
