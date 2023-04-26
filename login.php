@@ -48,8 +48,30 @@ app('register')->botProtection();
     </div>
     <!-- Preloader // -->
 
+    <style>
+        #logo {
+            margin-top: -50px;
+            margin-bottom: 50px;
+        }
+
+        #logo img {
+            height: 50px;
+        }
+
+        @media (min-width: 1200px) {
+            #logo img {
+                padding-left: 117px;
+            }
+        }
+    </style>
+
     <main class="d-flex">
         <div class="container main-container">
+            <div class="row" id="logo">
+                  <div class="text-center">
+                      <img class="img-fluid" src="https://maxlease.nl/images/logo.png" alt="logo MaxLease">
+                </div>
+            </div>
             <div class="row nm-aic">
                 <div class="col-md-6 col-lg-5 offset-lg-1 nm-mb-1 nm-mb-md-1">
                     <div class="card">
