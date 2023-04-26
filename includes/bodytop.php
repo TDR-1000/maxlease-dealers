@@ -22,9 +22,6 @@
                   <span class="nio-version">Extranet</span>
                 </a>
               </div>
-              <?php if (isset($socketActive) && $socketActive == true) {
-                include 'includes/ajax/visuals/call.php';
-              } ?>
               <div class="nk-header-tools">
                 <ul class="nk-quick-nav">
                   <li class="dropdown user-dropdown">
@@ -34,8 +31,14 @@
                           <em class="icon ni ni-user-alt"></em>
                         </div>
                         <div class="user-info d-none d-md-block">
-                          <div class="user-status user-status-unverified">Max Lease</div>
-                          <div class="user-name dropdown-indicator">Georg Rabat</div>
+                          <div class="user-status user-status-unverified"><?php
+$bedrijfsnaam = $dealer[0]['Bedrijfsnaam'];
+if (strlen($bedrijfsnaam) > 10) {
+  $bedrijfsnaam = substr($bedrijfsnaam, 0, 20) . '...';
+}
+echo $bedrijfsnaam;
+?></div>
+                          <div class="user-name dropdown-indicator"><?= ucfirst($currentUser->first_name) ?> <?= ucfirst($currentUser->last_name) ?></div>
                         </div>
                       </div>
                     </a>
@@ -53,78 +56,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="dropdown notification-dropdown me-n1">
-                    <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
-                      <div class="icon-status icon-status-info"><em class="icon ni ni-bell"></em></div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right dropdown-menu-s1">
-                      <div class="dropdown-head">
-                        <span class="sub-title nk-dropdown-title">Notifications</span>
-                        <a href="#">Mark All as Read</a>
-                      </div>
-                      <div class="dropdown-body">
-                        <div class="nk-notification">
-                          <div class="nk-notification-item dropdown-inner">
-                            <div class="nk-notification-icon">
-                              <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
-                            </div>
-                            <div class="nk-notification-content">
-                              <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
-                              <div class="nk-notification-time">2 hrs ago</div>
-                            </div>
-                          </div><!-- .dropdown-inner -->
-                          <div class="nk-notification-item dropdown-inner">
-                            <div class="nk-notification-icon">
-                              <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
-                            </div>
-                            <div class="nk-notification-content">
-                              <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
-                              <div class="nk-notification-time">2 hrs ago</div>
-                            </div>
-                          </div><!-- .dropdown-inner -->
-                          <div class="nk-notification-item dropdown-inner">
-                            <div class="nk-notification-icon">
-                              <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
-                            </div>
-                            <div class="nk-notification-content">
-                              <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
-                              <div class="nk-notification-time">2 hrs ago</div>
-                            </div>
-                          </div><!-- .dropdown-inner -->
-                          <div class="nk-notification-item dropdown-inner">
-                            <div class="nk-notification-icon">
-                              <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
-                            </div>
-                            <div class="nk-notification-content">
-                              <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
-                              <div class="nk-notification-time">2 hrs ago</div>
-                            </div>
-                          </div><!-- .dropdown-inner -->
-                          <div class="nk-notification-item dropdown-inner">
-                            <div class="nk-notification-icon">
-                              <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
-                            </div>
-                            <div class="nk-notification-content">
-                              <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
-                              <div class="nk-notification-time">2 hrs ago</div>
-                            </div>
-                          </div><!-- .dropdown-inner -->
-                          <div class="nk-notification-item dropdown-inner">
-                            <div class="nk-notification-icon">
-                              <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
-                            </div>
-                            <div class="nk-notification-content">
-                              <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
-                              <div class="nk-notification-time">2 hrs ago</div>
-                            </div>
-                          </div><!-- .dropdown-inner -->
-                        </div>
-                      </div><!-- .nk-dropdown-body -->
-                      <div class="dropdown-foot center">
-                        <a href="#">View All</a>
-                      </div>
-                    </div>
-                  </li>
+                 
                 </ul>
               </div>
             </div>

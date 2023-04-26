@@ -24,6 +24,11 @@ if (app('login')->isLoggedIn()) {
 } else {
   redirect('login');
 }
+$db = app('db');
+$dealer = $db->select(
+  "SELECT * FROM `as_dealers` WHERE `dealer_id` = :id",
+  array ("id" => $currentUser->dealer_id)
+);
 ?>
 
 <!DOCTYPE html>

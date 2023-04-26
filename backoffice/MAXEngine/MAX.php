@@ -92,6 +92,7 @@ $container['current_user'] = function ($c) {
     return (object)[
         'id' => (int)$result['user_id'],
         'email' => $result['email'],
+        'dealer_id' => (int)$result['dealer_id'],
         'username' => $result['username'],
         'first_name' => $result['first_name'],
         'last_name' => $result['last_name'],

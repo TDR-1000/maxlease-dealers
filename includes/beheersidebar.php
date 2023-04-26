@@ -17,8 +17,8 @@
                             <div class="nk-sidebar-widget d-none d-xl-block">
                                 <div class="user-account-actions">
                                     <ul class="g-3">
-                                        <li><a href="https://maxlease.nl" target="_blank" class="btn btn-lg btn-primary"><span>Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span></a></li>
-                                        <li><a href="https://maxlease.nl/berekenen?modal=true" target="_blank" class="btn btn-lg btn-outline-primary popupBerekenen"><span> <i class="fa-solid fa-plus"></i> Nieuwe offerte</span></a></li>
+                                        <li><a href="https://maxlease.nl/partners/calculator/<?= $dealer[0]['pretty_name'] ?>" target="_blank" class="btn btn-lg btn-primary"><span>Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></span></a></li>
+                                        <li><a href="https://maxlease.nl/partners/rekentool/<?= $dealer[0]['magic_url'] ?>" target="_blank" class="btn btn-lg btn-outline-primary popupBerekenen"><span> <i class="fa-solid fa-plus"></i> Offerte</span></a></li>
                                     </ul>
                                 </div>
                             </div><!-- .nk-sidebar-widget -->

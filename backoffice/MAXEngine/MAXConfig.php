@@ -6,15 +6,15 @@ date_default_timezone_set('UTC');
 //WEBSITE
 
 define('WEBSITE_NAME', 'Max Lease');
-define('WEBSITE_DOMAIN', 'https://dealers.maxlease.nl/');
-define('SCRIPT_URL', 'https://dealers.maxlease.nl/');
+define('WEBSITE_DOMAIN', 'http://localhost:8888/maxlease-dealers/');
+define('SCRIPT_URL', 'http://localhost:8888/maxlease-dealers/');
 
 //DATABASE CONFIGURATION
 define('DB_HOST', 'localhost');
 define('DB_TYPE', 'mysql');
-define('DB_USER', 'maxlease_usr_engine');
-define('DB_PASS', 'Yd55w38g~');
-define('DB_NAME', 'maxlease_ENGINE_db');
+define('DB_USER', 'root');
+define('DB_PASS', 'root');
+define('DB_NAME', 'max');
 
 //SESSION CONFIGURATION
 define('SESSION_SECURE', false);

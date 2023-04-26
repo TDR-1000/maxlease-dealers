@@ -1,0 +1,20 @@
+RewriteEngine on
+
+RewriteRule ^voorraad/(.*)/?$ voorraad.php?filter=$1 [L,QSA]
+RewriteRule ^offerte/(.*)/?$ offerte-detail.php?id=$1 [QSA,L]
+RewriteRule ^includes/pdf/offerte/(.*)/?$ includes/pdf/offerte.php?id=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
+
+RewriteRule ^r/voorraad/merk/(.*)/?$ voorraad.php?merk=$1 [L,QSA]
+RewriteRule ^r/voorraad/type/(.*)/?$ voorraad.php?type=$1 [L,QSA]
+
+RewriteRule ^i/(.*)/?$ auto.php?prettylink=$1 [QSA,L]
+RewriteRule ^artikel/(.*)/?$ blog_artikel.php?prettylink=$1 [QSA,L]
+RewriteRule ^images/autos/social/(.*)/?$ images/autos/afbeelding.php?id=$1 [L,QSA]
+
+
+
