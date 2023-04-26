@@ -5,8 +5,14 @@ include "backoffice/MAXEngine/MAX.php";
 if (app('login')->isLoggedIn()) {
     //redirect('index.php');
 }
+$db = app('db');
 
-//$valid = app('validator')->prKeyValid($_GET['k']);
+$valid = app('validator')->prKeyValid($_GET['k']);
+
+$result = $db->select(
+    "SELECT * FROM `as_users` WHERE `password_reset_key` = :id",
+    array ("id" => $_GET['k'])
+);
 ?>
 <!doctype html>
 <html lang="nl">
@@ -58,13 +64,19 @@ if (app('login')->isLoggedIn()) {
                                 <!-- start: Reset Password Form -->
                                 <div class="form-wrapper active">
                                     <h6 class="text-uppercase mb-5 mt-3">
-                                        <?= trans('reset_password') ?>
+                                        Wachtwoord aanmaken
                                     </h6>
 
                                     <form id="password-reset-form">
+                                    <div class="form-group">
+                                            <label>
+                                                Gebruikersnaam
+                                            </label>
+                                            <input type="name" disabled value="<?= $result[0]['username'] ?>" class="form-control">
+                                        </div>
                                         <div class="form-group">
                                             <label>
-                                                <?= trans('new_password') ?>
+                                                Wachtwoord
                                             </label>
                                             <input type="password" name="new_password" class="form-control">
                                         </div>
@@ -72,22 +84,22 @@ if (app('login')->isLoggedIn()) {
                                         <button id="btn-reset-pass"
                                                 type="submit"
                                                 class="btn btn-success mt-4 btn-block btn-lg"
-                                                data-loading-text="<?= trans('resetting') ?>">
-                                            <?= trans('reset_password') ?>
+                                                data-loading-text="Aanmaken...">
+                                            Verstuur
                                         </button>
                                     </form>
                                 </div>
                                 <!-- end: Reset Password Form -->
                             <?php else : ?>
                                 <h5 class="text-danger text-center mt-3">
-                                    <?= trans('invalid_password_reset_key') ?>
+                                    De sleutel voor het instellen van het wachtwoord is ongeldig of verlopen
                                 </h5>
                             <?php endif; ?>
                         </div>
                             </div>
 
                             <div class="form-wrapper" id="forgot">
-                                <h2 class="nm-tc nm-mb-1">Wachtwoord vergeten</h2>
+                                <h2 class="nm-tc nm-mb-1">Wachtwoord Aanmaken</h2>
 
                                 <form id="forgot-pass-form">
                                     <div class="mb-3">
@@ -99,7 +111,7 @@ if (app('login')->isLoggedIn()) {
 
                                     <div class="d-grid">
                                         <button id="btn-forgot-password" type="submit" class="btn btn-block btn-primary text-uppercase nm-btn">
-                                            Wachtwoord resetten
+                                            Wachtwoord aanmaken
                                         </button>
                                     </div>
                                 </form>
