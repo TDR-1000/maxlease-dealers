@@ -99,7 +99,7 @@ app('register')->botProtection();
 
                                     <div>
                                         <a href="#forgot" class="form-change text-decoration-none mb-1">
-                                            <?= trans('forgot_password') ?>
+                                            Wachtwoord vergeten?
                                         </a>
                                     </div>
 
@@ -147,7 +147,7 @@ app('register')->botProtection();
                                 </div>
 
                                 <div class="content">
-                                    <p>Het extranet verhoogt efficiëntie en bespaart tijd door het eenvoudig indienen van financieringsaanvragen.</p>
+                                    <p>Bij ons realiseert u meer verkopen tegen een hogere marge.</p>
                                 </div>
                             </div>
                         </li>
@@ -159,7 +159,7 @@ app('register')->botProtection();
                                 </div>
 
                                 <div class="content">
-                                    <p>Garages hebben real-time inzicht en controle over hun aanvragen voor een soepeler financieringsproces.</p>
+                                    <p>Beheer altijd de geschiedenis van de aanvragen die u heeft gedaan.</p>
                                 </div>
                             </div>
                         </li>
@@ -171,7 +171,7 @@ app('register')->botProtection();
                                 </div>
 
                                 <div class="content">
-                                    <p>Verbeterde communicatie en samenwerking worden bereikt door een centraal platform voor autogarages en financierings&shy;maatschappijen.</p>
+                                    <p>U profiteert van een extra vergoeding, bovenop uw reguliere inkomsten.</p>
                                 </div>
                             </div>
                         </li>
