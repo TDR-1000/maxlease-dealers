@@ -55,7 +55,7 @@ app('register')->botProtection();
                     <div class="card">
                         <div class="card-content">
                             <div class="form-wrapper active" id="login">
-                                <h2 class="nm-tc nm-mb-1">Inloggen Intranet</h2>
+                                <h2 class="nm-tc nm-mb-1">Inloggen Extranet</h2>
                                 <form class="form-horizontal">
                                     <!-- start: Username -->
                                     <div class="mb-3">
@@ -77,7 +77,7 @@ app('register')->botProtection();
 
                                     <div>
                                         <a href="#forgot" class="form-change text-decoration-none mb-1">
-                                            Wachtwoord vergeten?
+                                            <?= trans('forgot_password') ?>
                                         </a>
                                     </div>
 
@@ -89,6 +89,11 @@ app('register')->botProtection();
 
                                     <div class="row social nm-mb-1">
                                     </div>
+
+                                    <p class="text-center mb-0">
+                                        Nog geen account?
+                                        <a class="nm-ft-b" href="signup.html">Maak een account aan.</a>
+                                    </p>
                                 </form>
                             </div>
 
@@ -113,7 +118,49 @@ app('register')->botProtection();
                         </div>
                     </div>
                 </div>
-                
+                <div class="col-md-6 col-lg-5 offset-lg-1">
+                    <h2 class="large">Gemak en Efficiëntie voor jouw als garagehouder.</h2>
+                    <p class="subtitle">Voordelen van het Extranet voor Autogarages</p>
+                    <ul class="list-unstyled mb-11">
+                        <li>
+                            <div class="list nm-aic">
+                                <div class="icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+
+                                <div class="content">
+                                    <p>Het extranet verhoogt efficiëntie en bespaart tijd door het eenvoudig indienen van financieringsaanvragen.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="list nm-aic">
+                                <div class="icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                </div>
+
+                                <div class="content">
+                                    <p>Garages hebben real-time inzicht en controle over hun aanvragen voor een soepeler financieringsproces.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="list nm-aic">
+                                <div class="icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+
+                                <div class="content">
+                                    <p>Verbeterde communicatie en samenwerking worden bereikt door een centraal platform voor autogarages en financierings&shy;maatschappijen.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button type="submit" class="btn btn-primary text-uppercase nm-btn">Meer informatie</button>
+                </div>
             </div>
         </div>
     </main>
