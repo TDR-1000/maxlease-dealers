@@ -1,0 +1,11 @@
+body {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+
+a {
+  transition: none;
+}

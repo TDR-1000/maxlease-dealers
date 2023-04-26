@@ -1,0 +1,34 @@
+@font-face {
+    font-family: Kenteken;
+    src: url(../fonts/kenteken.eot);
+    src: url(../fonts/kenteken.eot?#iefix) format("embedded-opentype"),url(../fonts/kenteken.woff2) format("woff2"),url(../fonts/kenteken.woff) format("woff"),url(../fonts/kenteken.ttf) format("ttf"),url(../fonts/kenteken.svg#Kenteken) format("svg");
+    font-style: normal;
+    font-weight: 300
+}
+
+.kentekenplaat {
+    background: #f2ba00 url(../images/kenteken/flag.svg) no-repeat top left;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222;
+    font-family: Kenteken,Arial,sans-serif;
+    font-size: 2em;
+    position: relative;
+    /* top: 7px; */
+    font-weight: 700;
+    line-height: normal;
+    max-width: 36em;
+    padding: 0px;
+    padding-left: 1.5em;
+    text-transform: uppercase;
+    -webkit-transition: background-color .3s ease,text-shadow .3s ease;
+    transition: background-color .3s ease,text-shadow .3s ease;
+    text-shadow: 1px 1px #ffe153
+}
+
+.kentekenplaat:focus {
+    background-color: #ffc70d;
+    outline: 0;
+    text-shadow: 0 0 #ffe153
+}

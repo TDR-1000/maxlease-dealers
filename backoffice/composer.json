@@ -1,0 +1,27 @@
+{
+    "name": "marketingoptimaal/max-lease-website",
+    "description": "MaxLease nieuwe website",
+    "keywords": ["max", "lease", "new", "website"],
+    "type": "project",
+    "require": {
+        "php": ">=7.2.5",
+        "pimple/pimple": "^3.5",
+        "phpmailer/phpmailer": "^6.6",
+        "hybridauth/hybridauth": "^3.8",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "mpdf/mpdf": "^8.1"
+    },
+    "autoload": {
+        "classmap": [
+            "MAXEngine"
+        ],
+        "files": [
+            "MAXEngine/MAXConfig.php",
+            "MAXEngine/MAXHelperFunctions.php"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
