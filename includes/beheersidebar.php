@@ -41,21 +41,15 @@
                                         </a>
                                     </li>
                                     <li class="nk-menu-item">
-                                        <a href="voertuigen" class="nk-menu-link">
-                                            <span class="nk-menu-icon"><i class="fa-solid fa-car"></i></span>
-                                            <span class="nk-menu-text">Voertuigen</span>
-                                        </a>
-                                    </li>
-                                    <li class="nk-menu-item">
-                                        <a href="leveranciers" class="nk-menu-link">
+                                        <a href="besdrijfsgegevens" class="nk-menu-link">
                                             <span class="nk-menu-icon"><i class="fa-solid fa-building"></i></span>
-                                            <span class="nk-menu-text">Leveranciers</span>
+                                            <span class="nk-menu-text">Bedrijfsgegevens</span>
                                         </a>
                                     </li>
                                     <li class="nk-menu-item">
-                                        <a href="blog" class="nk-menu-link">
-                                            <span class="nk-menu-icon"><i class="fa-solid fa-square-rss"></i></span>
-                                            <span class="nk-menu-text">Blog artikelen</span>
+                                        <a href="openingstijden" class="nk-menu-link">
+                                            <span class="nk-menu-icon"><i class="fa-solid fa-square-clock"></i></span>
+                                            <span class="nk-menu-text">Openingstijden</span>
                                         </a>
                                     </li>
                                     <li class="nk-menu-item">
