@@ -12,9 +12,9 @@ define('SCRIPT_URL', 'https://dealers.maxlease.nl/');
 //DATABASE CONFIGURATION
 define('DB_HOST', 'localhost');
 define('DB_TYPE', 'mysql');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
-define('DB_NAME', 'max');
+define('DB_USER', 'maxlease_usr_engine');
+define('DB_PASS', 'Yd55w38g~');
+define('DB_NAME', 'maxlease_ENGINE_db');
 
 //SESSION CONFIGURATION
 define('SESSION_SECURE', false);
